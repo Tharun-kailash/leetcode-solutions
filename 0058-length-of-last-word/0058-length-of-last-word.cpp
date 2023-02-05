@@ -2,18 +2,18 @@ class Solution {
 public:
     int lengthOfLastWord(string s) {
       int n=s.size();
-      string newstr;
+      int count=0;
       for(int i=n-1;i>=0;i--){
-          if(newstr.size()==0  && s[i]==' '){
+          if(count==0  && s[i]==' '){
               continue;
           }
           else{
               if(s[i]==' '){
                 break;
             }   
-            newstr+=s[i];
+            count++;
           } 
       }  
-        return newstr.size();
+        return count;
     }
 };
