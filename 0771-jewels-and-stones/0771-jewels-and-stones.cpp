@@ -4,9 +4,7 @@ public:
         int count = 0;
         unordered_set<char> hch(jewels.begin(), jewels.end());
         for(auto i:stones){
-            if(hch.count(i)) {
-                count++;
-            }          
+            count += hch.count(i);
         }
         return count;
     }
