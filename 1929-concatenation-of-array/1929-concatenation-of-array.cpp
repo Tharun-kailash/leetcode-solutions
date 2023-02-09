@@ -6,11 +6,12 @@ public:
         //     nums.push_back(nums[i]);
         // }
         // return nums;
-        vector<int> newarr(2*nums.size());
+        int n = nums.size();
+        vector<int> newarr(2*n);
         int i;
-        for(i=0;i<nums.size();i++){
+        for(i=0;i<n;i++){
             newarr[i]=nums[i];
-            newarr[i+nums.size()]=nums[i];
+            newarr[i+n]=nums[i];
         }
         return newarr;
     }
